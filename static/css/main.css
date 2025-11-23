@@ -156,9 +156,67 @@ body {
     }
 }
 
+
 /* =========================================
    SECCIÓN DIEGO (CONTACTO)
    Prefijo obligatorio: .cont-  o  #cont-
    ========================================= */
 
-   /* Diego, pega tus estilos aquí abajo */
+/* Fondo general */
+.cont-body {
+    background-color: #f8f9fa;
+}
+
+/* Hero Header (Fondo degradado azulado) */
+.cont-hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+    margin-top: -1.5rem; /* Para pegarse al navbar */
+    padding-bottom: 3rem;
+}
+
+/* Animaciones */
+.cont-animate-fade {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.cont-animate-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Tarjetas del Equipo */
+.cont-team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    border-radius: 1rem;
+}
+
+.cont-team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Avatar circular */
+.cont-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
