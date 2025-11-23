@@ -1,31 +1,237 @@
-// ...existing code...
 <!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hola Mundo</title>
-  <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: #f7f7fb;
-    }
-    h1 {
-      font-size: clamp(1.5rem, 4vw, 3rem);
-      color: #222;
-    }
-  </style>
-</head>
-<body>
-  <h1>Hola, mundo!</h1>
-  <script>
-    // Mensaje en la consola
-    console.log('Hola, mundo!');
-  </script>
-</body>
+<html lang="es" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TechVision Analytics - Dashboard de Negocios">
+    <!-- Referencia a los autores del proyecto -->
+    <meta name="author" content="Equipo Victor, Diego, Sebastian">
+    <title>Inicio | TechVision Analytics</title>
+
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos de Bootstrap (Para las flechitas y simbolos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- CSS Personalizado (Referencia al archivo compartido main.css) -->
+    <link href="../static/css/main.css" rel="stylesheet">
+  </head>
+  
+  <!-- Usamos la clase home-body para estilos específicos de esta página si fuera necesario -->
+  <body class="home-body">
+
+    <!-- ==================================================
+         NAVBAR (COMPARTIDO)
+         Cambios: Centrado, Sin botón de login, Logo a la izquierda
+         ================================================== -->
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="main-navbar">
+        <div class="container-fluid">
+          
+          <!-- 1. LOGO (Izquierda) -->
+          <!-- Nota para Sebas: Aquí va la imagen del logo de 40px de alto -->
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <i class="bi bi-graph-up-arrow text-primary"></i> <!-- Icono temporal hasta tener logo -->
+            TechVision
+          </a>
+          
+          <!-- Botón Hamburguesa (Aparece solo en celular) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- 2. MENÚ CENTRADO -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+            <ul class="navbar-nav mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold px-4" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Espacio vacío a la derecha para equilibrar el logo y que el menú quede centrado visualmente -->
+          <div class="d-none d-md-block" style="width: 120px;"></div> 
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- ==================================================
+           CARRUSEL PRINCIPAL (HERO)
+           Cambios: 4 Imágenes, Flechas activadas, Textos de negocio
+           ================================================== -->
+      <div id="homeCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        
+        <!-- Indicadores (Los puntitos inferiores) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <!-- Contenido de las Diapositivas (Slides) -->
+        <div class="carousel-inner">
+          
+          <!-- Slide 1 -->
+          <div class="carousel-item active home-carousel-item">
+            <div class="home-overlay"></div>
+            <!-- Imagen placeholder. Sebas debe reemplazar src="" con su imagen local -->
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" class="d-block w-100 home-carousel-img" alt="Analytics">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1 class="home-hero-title">Inteligencia de Negocios.</h1>
+                <p class="opacity-75 home-hero-text">Toma el control con datos en tiempo real.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item home-carousel-item">
+            <div class="home-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop" class="d-block w-100 home-carousel-img" alt="Growth">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1 class="home-hero-title">Crecimiento Exponencial.</h1>
+                <p class="home-hero-text">Estrategias digitales que impulsan tus ventas.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item home-carousel-item">
+            <div class="home-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2340&auto=format&fit=crop" class="d-block w-100 home-carousel-img" alt="Team">
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1 class="home-hero-title">Colaboración Total.</h1>
+                <p class="home-hero-text">Conecta equipos y optimiza flujos de trabajo.</p>
+              </div>
+            </div>
+          </div>
+
+           <!-- Slide 4 -->
+           <div class="carousel-item home-carousel-item">
+            <div class="home-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2340&auto=format&fit=crop" class="d-block w-100 home-carousel-img" alt="Data">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1 class="home-hero-title">Big Data Simplificado.</h1>
+                <p class="home-hero-text">Algoritmos potentes trabajando para ti.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Flechas de Navegación (Añadidas como pediste) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+
+      <!-- ==================================================
+           SECCIÓN DE MARKETING (ICONOS)
+           ================================================== -->
+      <div class="container home-marketing">
+        <div class="row">
+          
+          <!-- Columna 1 -->
+          <div class="col-lg-4 text-center home-feature-col">
+            <div class="home-icon-circle bg-primary text-white mb-3 mx-auto d-flex align-items-center justify-content-center">
+                <i class="bi bi-speedometer2 fs-1"></i>
+            </div>
+            <h2 class="fw-normal">Rapidez</h2>
+            <p>Carga de datos instantánea para decisiones al momento.</p>
+          </div>
+          
+          <!-- Columna 2 -->
+          <div class="col-lg-4 text-center home-feature-col">
+            <div class="home-icon-circle bg-success text-white mb-3 mx-auto d-flex align-items-center justify-content-center">
+                <i class="bi bi-shield-lock fs-1"></i>
+            </div>
+            <h2 class="fw-normal">Seguridad</h2>
+            <p>Tus datos protegidos con los más altos estándares.</p>
+          </div>
+          
+          <!-- Columna 3 -->
+          <div class="col-lg-4 text-center home-feature-col">
+            <div class="home-icon-circle bg-warning text-dark mb-3 mx-auto d-flex align-items-center justify-content-center">
+                <i class="bi bi-bar-chart-line fs-1"></i>
+            </div>
+            <h2 class="fw-normal">Escalabilidad</h2>
+            <p>Crece sin límites, el sistema se adapta a ti.</p>
+          </div>
+
+        </div>
+
+        <!-- Divisor estético -->
+        <hr class="home-divider featurette-divider">
+
+        <!-- ==================================================
+             FEATURETTES (IMÁGENES Y TEXTO ALTERNADOS)
+             ================================================== -->
+
+        <div class="row featurette align-items-center">
+          <div class="col-md-7">
+            <h2 class="home-featurette-heading fw-normal lh-1">Gestión Integral. <span class="text-body-secondary">Todo en uno.</span></h2>
+            <p class="lead">Centraliza inventarios, ventas y recursos humanos en un solo dashboard intuitivo y fácil de usar.</p>
+          </div>
+          <div class="col-md-5">
+             <!-- Placeholder gris de 500x500. Reemplazar con imagen real -->
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">Imagen 500x500</text></svg>
+          </div>
+        </div>
+
+        <hr class="home-divider featurette-divider">
+
+        <div class="row featurette align-items-center">
+          <div class="col-md-7 order-md-2">
+            <h2 class="home-featurette-heading fw-normal lh-1">Reportes Automatizados. <span class="text-body-secondary">Ahorra tiempo.</span></h2>
+            <p class="lead">Configura envíos automáticos de rendimiento semanal a tu correo. Analiza patrones sin esfuerzo.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <!-- Placeholder gris de 500x500. Reemplazar con imagen real -->
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">Imagen 500x500</text></svg>
+          </div>
+        </div>
+
+        <hr class="home-divider featurette-divider">
+
+      </div><!-- Fin del contenedor principal -->
+
+
+      <!-- ==================================================
+           FOOTER (PIE DE PÁGINA)
+           Cambios: Una sola línea, sin enlaces, minimalista.
+           ================================================== -->
+      <footer class="container py-4">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center border-top pt-4">
+            <p class="mb-0 text-body-secondary">&copy; 2025 Universidad Politécnica Salesiana - Proyecto 1</p>
+            <p class="mb-0 text-body-secondary">Desarrollado por: Victor, Diego, Sebastian</p>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- Bootstrap JS (Necesario para que el carrusel y menú funcionen) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script propio del index (Referencia al archivo JS) -->
+    <script src="../static/js/login.js"></script> 
+
+  </body>
 </html>

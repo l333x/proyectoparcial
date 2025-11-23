@@ -3,16 +3,112 @@
    Aquí van fuentes, body, y variables root
    ========================================= */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
     background-color: #f8f9fa; /* Gris suave de fondo para todos */
+    padding-top: 3.5rem; /* Espacio vital para que la navbar fija no tape nada */
+    color: #5a5a5a;
 }
 
 /* =========================================
    SECCIÓN SEBASTIÁN (LOGIN & HOME)
    Prefijo obligatorio: .login-  o  #login-
+   (Nota: Usamos prefijo .home- para la landing page para evitar conflictos)
    ========================================= */
 
-   /* Escribe aquí abajo tus estilos, Sebas */
+   /* --- Estilos del Carrusel (Hero) --- */
+.home-carousel {
+    margin-bottom: 4rem;
+}
+
+/* Altura fija del carrusel - Importante para que la página no "salte" al cargar */
+.home-carousel-item {
+    height: 32rem; 
+    background-color: #777; /* Color de fondo de seguridad */
+    position: relative;
+}
+
+/* Imágenes del carrusel */
+.home-carousel-img {
+    object-fit: cover; /* La imagen cubre todo el espacio sin deformarse */
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.6); /* Oscurece la imagen para que el texto blanco resalte */
+}
+
+/* Títulos grandes del Carrusel */
+.home-hero-title {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Sombra negra suave */
+}
+
+.home-hero-text {
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* --- Sección Marketing (Los 3 Círculos) --- */
+
+/* AÑADIDO: Margen superior para separar del carrusel */
+.home-marketing {
+    margin-top: 5rem; /* ¡Aquí está la magia! Separación superior */
+}
+
+.home-icon-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Truco para hacer un div perfectamente redondo */
+    font-size: 2.5rem; /* Tamaño del icono */
+    margin-bottom: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); /* Sombrita elegante */
+}
+
+.home-marketing .home-feature-col {
+    margin-bottom: 1.5rem;
+}
+
+/* --- Divisores y Secciones de Texto (Featurettes) --- */
+.home-divider {
+    margin: 5rem 0; /* Mucho aire para que se vea limpio */
+}
+
+.home-featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+/* Ajustes Responsive */
+@media (min-width: 40em) {
+    .home-featurette-heading {
+        font-size: 50px;
+    }
+}
+
+/* --- Estilos para la Demo de IA (Gemini) --- */
+#ai-demo {
+    transition: all 0.3s ease;
+}
+
+#ai-demo:hover {
+    transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+#aiResult {
+    border-left: 5px solid #0d6efd; /* Borde azul lateral para destacar la respuesta */
+}
+
+#aiResult ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+#aiResult h3, #aiResult h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #333;
+}
 
 
 /* =========================================
@@ -20,7 +116,7 @@ body {
    Prefijo obligatorio: .dash-  o  #dash-
    ========================================= */
 
-   /* Escribe aquí abajo tus estilos, Victor */
+   /* Victor, pega tus estilos aquí abajo */
 
 
 /* =========================================
@@ -28,4 +124,4 @@ body {
    Prefijo obligatorio: .cont-  o  #cont-
    ========================================= */
 
-   /* Escribe aquí abajo tus estilos, Diego */
+   /* Diego, pega tus estilos aquí abajo */
