@@ -111,13 +111,50 @@ body {
 }
 
 
+
 /* =========================================
    SECCIÓN VICTOR (DASHBOARD)
    Prefijo obligatorio: .dash-  o  #dash-
    ========================================= */
 
-   /* Victor, pega tus estilos aquí abajo */
+/* Fondo suave para el dashboard */
+.dash-body {
+    background-color: #f1f4f6; /* Un gris azulado muy clarito */
+}
 
+/* Header Animado */
+.dash-header-animate {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+/* Efecto Hover en las Tarjetas KPI */
+.dash-card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.dash-card-hover:hover {
+    transform: translateY(-5px); /* Se levanta un poco */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Ajustes de Tablas */
+#tabla-transacciones th {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Animación simple de entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* =========================================
    SECCIÓN DIEGO (CONTACTO)

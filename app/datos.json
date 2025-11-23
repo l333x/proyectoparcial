@@ -1,0 +1,111 @@
+{
+  "kpis": {
+    "semana": {
+      "ventas": "$24,500",
+      "ingresos": "$1,500",
+      "usuarios": "+120",
+      "conversion": "3.5%"
+    },
+    "mes": {
+      "ventas": "$98,200",
+      "ingresos": "$12,400",
+      "usuarios": "+850",
+      "conversion": "4.1%"
+    }
+  },
+  "graficas": {
+    "ventas": {
+      "semana": {
+        "labels": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+        "data": [1200, 1900, 3000, 500, 2000, 3000, 4500]
+      },
+      "mes": {
+        "labels": ["Semana 1", "Semana 2", "Semana 3", "Semana 4"],
+        "data": [15400, 22300, 18100, 25600]
+      }
+    },
+    "categorias": {
+      "labels": ["Electrónica", "Hogar", "Ropa", "Deportes", "Juguetes"],
+      "data": [45, 25, 20, 10, 5],
+      "colores": ["#0d6efd", "#198754", "#ffc107", "#dc3545", "#6f42c1"]
+    },
+    "inventario_por_categoria": {
+      "General": {
+        "labels": ["Laptop Pro", "Smart TV 4K", "Auriculares BT", "Cámara DSLR", "Reloj Inteligente"],
+        "data": [120, 95, 80, 60, 45]
+      },
+      "Electrónica": {
+        "labels": ["Laptop Gamer", "Smartphone X", "Tablet Pro", "Monitor 4K", "Teclado Mecánico", "Mouse Ergo", "Webcam HD", "Disco SSD 1TB", "Memoria RAM 16GB", "Router WiFi 6", "Powerbank 20k", "Cables HDMI", "Hub USB-C", "Proyector Mini", "Impresora Láser", "Bocina Bluetooth", "Audífonos Noise", "Microfono USB", "Estabilizador", "Dron 4K"],
+        "data": [50, 120, 80, 45, 60, 70, 30, 90, 100, 40, 55, 150, 65, 20, 15, 85, 95, 25, 10, 5]
+      },
+      "Hogar": {
+        "labels": ["Aspiradora Robot", "Licuadora Pro", "Cafetera Express", "Purificador Aire", "Lámpara LED", "Silla Ergonómica", "Escritorio", "Juego Sábanas", "Almohadas Memory", "Toallas Baño", "Set Cuchillos", "Olla Presión", "Microondas", "Plancha Vapor", "Ventilador Torre", "Calefactor", "Organizador", "Espejo Decorativo", "Alfombra Sala", "Cortinas Blackout"],
+        "data": [35, 40, 55, 20, 100, 15, 10, 60, 70, 80, 25, 30, 22, 45, 50, 18, 90, 12, 8, 40]
+      },
+      "Ropa": {
+        "labels": ["Camiseta Básica", "Jeans Slim", "Chaqueta Cuero", "Zapatillas Run", "Sudadera Capucha", "Vestido Verano", "Pantalón Cargo", "Camisa Formal", "Abrigo Lana", "Botas Montaña", "Calcetines Pack", "Ropa Interior", "Gorra Sport", "Bufanda", "Guantes", "Traje Baño", "Pijama Algodón", "Shorts Gym", "Blusa Seda", "Falda Plisada"],
+        "data": [200, 150, 30, 80, 90, 60, 70, 50, 20, 25, 300, 250, 100, 40, 35, 55, 85, 95, 45, 30]
+      },
+      "Deportes": {
+        "labels": ["Pesas 5kg", "Tapete Yoga", "Banda Elástica", "Balón Fútbol", "Raqueta Tenis", "Bicicleta Fija", "Cinta Correr", "Guantes Boxeo", "Cuerda Saltar", "Botella Agua", "Mochila Trekking", "Casco Bici", "Rodilleras", "Reloj Sport", "Zapatillas Trail", "Pelota Pilates", "Barra Dominadas", "Banco Pesas", "Set Golf", "Tabla Surf"],
+        "data": [60, 80, 100, 50, 15, 10, 5, 30, 120, 150, 40, 35, 55, 25, 45, 50, 20, 8, 3, 2]
+      },
+      "Juguetes": {
+        "labels": ["Lego City", "Muñeca", "Coche RC", "Juego Mesa", "Rompecabezas", "Peluche Oso", "Pistola Agua", "Set Arte", "Bloques Madera", "Tren Eléctrico", "Dron Juguete", "Consola Mini", "Cartas Uno", "Ajedrez", "Monopoly", "Casa Muñecas", "Patines", "Scooter Niño", "Pelota Goma", "Figura Acción"],
+        "data": [40, 60, 30, 55, 70, 80, 90, 35, 45, 15, 20, 25, 100, 30, 50, 10, 15, 12, 110, 65]
+      }
+    }
+  },
+  "transacciones": [
+    { "id": "#1075", "usuario": "Victor M.", "fecha": "Hoy 10:30 AM", "monto": "$1,200.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1074", "usuario": "Diego S.", "fecha": "Hoy 09:15 AM", "monto": "$85.50", "estado": "Pendiente", "categoria": "Ropa" },
+    { "id": "#1073", "usuario": "Sebastian R.", "fecha": "Ayer 04:45 PM", "monto": "$340.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1072", "usuario": "Ana Torres", "fecha": "Ayer 02:20 PM", "monto": "$25.00", "estado": "Cancelado", "categoria": "Deportes" },
+    { "id": "#1071", "usuario": "Pedro Gil", "fecha": "22 Oct", "monto": "$150.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1070", "usuario": "Luisa Lane", "fecha": "21 Oct", "monto": "$450.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1069", "usuario": "Jorge B.", "fecha": "21 Oct", "monto": "$1,200.00", "estado": "Reembolsado", "categoria": "Electrónica" },
+    { "id": "#1068", "usuario": "Maria C.", "fecha": "20 Oct", "monto": "$60.00", "estado": "Completado", "categoria": "Ropa" },
+    { "id": "#1067", "usuario": "Fernando P.", "fecha": "20 Oct", "monto": "$210.00", "estado": "Completado", "categoria": "Deportes" },
+    { "id": "#1066", "usuario": "Sofia L.", "fecha": "19 Oct", "monto": "$99.00", "estado": "Pendiente", "categoria": "Hogar" },
+    { "id": "#1065", "usuario": "Carlos R.", "fecha": "18 Oct", "monto": "$500.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1064", "usuario": "Elena M.", "fecha": "18 Oct", "monto": "$35.00", "estado": "Cancelado", "categoria": "Ropa" },
+    { "id": "#1063", "usuario": "Roberto G.", "fecha": "17 Oct", "monto": "$75.00", "estado": "Completado", "categoria": "Juguetes" },
+    { "id": "#1062", "usuario": "Lucia F.", "fecha": "17 Oct", "monto": "$120.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1061", "usuario": "Mario K.", "fecha": "16 Oct", "monto": "$300.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1060", "usuario": "Patricia J.", "fecha": "16 Oct", "monto": "$45.00", "estado": "Completado", "categoria": "Ropa" },
+    { "id": "#1059", "usuario": "Oscar L.", "fecha": "15 Oct", "monto": "$80.00", "estado": "Pendiente", "categoria": "Deportes" },
+    { "id": "#1058", "usuario": "Gabriela N.", "fecha": "15 Oct", "monto": "$150.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1057", "usuario": "Andres P.", "fecha": "14 Oct", "monto": "$200.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1056", "usuario": "Valeria S.", "fecha": "14 Oct", "monto": "$90.00", "estado": "Cancelado", "categoria": "Ropa" },
+    { "id": "#1055", "usuario": "Hugo T.", "fecha": "13 Oct", "monto": "$60.00", "estado": "Completado", "categoria": "Juguetes" },
+    { "id": "#1054", "usuario": "Diana V.", "fecha": "13 Oct", "monto": "$110.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1053", "usuario": "Ricardo A.", "fecha": "12 Oct", "monto": "$400.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1052", "usuario": "Carmen B.", "fecha": "12 Oct", "monto": "$30.00", "estado": "Completado", "categoria": "Ropa" },
+    { "id": "#1051", "usuario": "Sergio C.", "fecha": "11 Oct", "monto": "$180.00", "estado": "Pendiente", "categoria": "Deportes" },
+    { "id": "#1050", "usuario": "Natalia D.", "fecha": "11 Oct", "monto": "$250.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1049", "usuario": "Javier E.", "fecha": "10 Oct", "monto": "$350.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1048", "usuario": "Rosa F.", "fecha": "10 Oct", "monto": "$55.00", "estado": "Cancelado", "categoria": "Ropa" },
+    { "id": "#1047", "usuario": "Alberto G.", "fecha": "09 Oct", "monto": "$95.00", "estado": "Completado", "categoria": "Juguetes" },
+    { "id": "#1046", "usuario": "Monica H.", "fecha": "09 Oct", "monto": "$130.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1045", "usuario": "Felipe I.", "fecha": "08 Oct", "monto": "$500.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1044", "usuario": "Teresa J.", "fecha": "08 Oct", "monto": "$70.00", "estado": "Completado", "categoria": "Ropa" },
+    { "id": "#1043", "usuario": "Manuel K.", "fecha": "07 Oct", "monto": "$160.00", "estado": "Pendiente", "categoria": "Deportes" },
+    { "id": "#1042", "usuario": "Silvia L.", "fecha": "07 Oct", "monto": "$220.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1041", "usuario": "Gustavo M.", "fecha": "06 Oct", "monto": "$600.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1040", "usuario": "Alicia N.", "fecha": "06 Oct", "monto": "$40.00", "estado": "Cancelado", "categoria": "Ropa" },
+    { "id": "#1039", "usuario": "Hector O.", "fecha": "05 Oct", "monto": "$85.00", "estado": "Completado", "categoria": "Juguetes" },
+    { "id": "#1038", "usuario": "Beatriz P.", "fecha": "05 Oct", "monto": "$140.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1037", "usuario": "Julio Q.", "fecha": "04 Oct", "monto": "$450.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1036", "usuario": "Lorena R.", "fecha": "04 Oct", "monto": "$65.00", "estado": "Completado", "categoria": "Ropa" },
+    { "id": "#1035", "usuario": "Raul S.", "fecha": "03 Oct", "monto": "$190.00", "estado": "Pendiente", "categoria": "Deportes" },
+    { "id": "#1034", "usuario": "Veronica T.", "fecha": "03 Oct", "monto": "$280.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1033", "usuario": "Emilio U.", "fecha": "02 Oct", "monto": "$700.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1032", "usuario": "Clara V.", "fecha": "02 Oct", "monto": "$50.00", "estado": "Cancelado", "categoria": "Ropa" },
+    { "id": "#1031", "usuario": "Arturo W.", "fecha": "01 Oct", "monto": "$105.00", "estado": "Completado", "categoria": "Juguetes" },
+    { "id": "#1030", "usuario": "Ines X.", "fecha": "01 Oct", "monto": "$170.00", "estado": "Completado", "categoria": "Hogar" },
+    { "id": "#1029", "usuario": "Pablo Y.", "fecha": "30 Sep", "monto": "$550.00", "estado": "Completado", "categoria": "Electrónica" },
+    { "id": "#1028", "usuario": "Olga Z.", "fecha": "30 Sep", "monto": "$75.00", "estado": "Completado", "categoria": "Ropa" },
+    { "id": "#1027", "usuario": "Daniel A.", "fecha": "29 Sep", "monto": "$230.00", "estado": "Pendiente", "categoria": "Deportes" },
+    { "id": "#1026", "usuario": "Sara B.", "fecha": "29 Sep", "monto": "$320.00", "estado": "Completado", "categoria": "Hogar" }
+  ]
+}
