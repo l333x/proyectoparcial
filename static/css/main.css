@@ -1,150 +1,608 @@
+/* ========================================
+   TechVision Analytics - Estilos Principales
+   Desarrollado por: Victor, Diego, Sebastian
+   Universidad Politécnica Salesiana - 2025
+   ======================================== */
+
 /* =========================================
-   ESTILOS GENERALES (GLOBAL)
-   Aquí van fuentes, body, y variables root
+   RESET Y CONFIGURACIÓN GLOBAL
    ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gradient-start: #4a5568;
+    --primary-gradient-end: #2d3748;
+    --dark-bg: #1a202c;
+    --light-bg: #f7fafc;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
-    background-color: #f8f9fa; /* Gris suave de fondo para todos */
-    padding-top: 3.5rem; /* Espacio vital para que la navbar fija no tape nada */
-    color: #5a5a5a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    overflow-x: hidden;
+    background: var(--light-bg) !important;
+    padding-top: 0 !important;
 }
 
 /* =========================================
-   SECCIÓN SEBASTIÁN (LOGIN & HOME)
-   Prefijo obligatorio: .login-  o  #login-
-   (Nota: Usamos prefijo .home- para la landing page para evitar conflictos)
+   PÁGINA DE INICIO - SECCIÓN SEBASTIÁN
    ========================================= */
 
-   /* --- Estilos del Carrusel (Hero) --- */
-.home-carousel {
-    margin-bottom: 4rem;
-}
+/* Variables y Reset */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Altura fija del carrusel - Importante para que la página no "salte" al cargar */
-.home-carousel-item {
-    height: 32rem; 
-    background-color: #777; /* Color de fondo de seguridad */
-    position: relative;
-}
+        :root {
+            --primary-gradient-start: #4a5568;
+            --primary-gradient-end: #2d3748;
+            --dark-bg: #1a202c;
+            --light-bg: #f7fafc;
+        }
 
-/* Imágenes del carrusel */
-.home-carousel-img {
-    object-fit: cover; /* La imagen cubre todo el espacio sin deformarse */
-    height: 100%;
-    width: 100%;
-    filter: brightness(0.6); /* Oscurece la imagen para que el texto blanco resalte */
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: var(--light-bg);
+        }
 
-/* Títulos grandes del Carrusel */
-.home-hero-title {
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Sombra negra suave */
-}
+        /* ========== ANIMATED BACKGROUND ========== */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8ecf1 100%);
+            z-index: -2;
+            overflow: hidden;
+        }
 
-.home-hero-text {
-    font-size: 1.25rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
+        .blob {
+            position: absolute;
+            background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            opacity: 0.1;
+            filter: blur(50px);
+            z-index: -1;
+        }
 
-/* --- Sección Marketing (Los 3 Círculos) --- */
+        .blob-1 {
+            width: 400px;
+            height: 400px;
+            top: -5%;
+            left: -10%;
+            animation: blobAnim 8s infinite ease-in-out;
+        }
 
-/* AÑADIDO: Margen superior para separar del carrusel */
-.home-marketing {
-    margin-top: 5rem; /* ¡Aquí está la magia! Separación superior */
-}
+        .blob-2 {
+            width: 350px;
+            height: 350px;
+            top: 30%;
+            right: -5%;
+            animation: blobAnim2 10s infinite ease-in-out 2s;
+        }
 
-.home-icon-circle {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%; /* Truco para hacer un div perfectamente redondo */
-    font-size: 2.5rem; /* Tamaño del icono */
-    margin-bottom: 1rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); /* Sombrita elegante */
-}
+        .blob-3 {
+            width: 300px;
+            height: 300px;
+            bottom: 10%;
+            left: 5%;
+            animation: blobAnim3 12s infinite ease-in-out 4s;
+        }
 
-.home-marketing .home-feature-col {
-    margin-bottom: 1.5rem;
-}
+        @keyframes blobAnim {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            25% { transform: translate(25px, -35px) scale(1.05) rotate(90deg); }
+            50% { transform: translate(-25px, 25px) scale(0.95) rotate(180deg); }
+            75% { transform: translate(30px, 15px) scale(1.02) rotate(270deg); }
+        }
 
-/* --- Divisores y Secciones de Texto (Featurettes) --- */
-.home-divider {
-    margin: 5rem 0; /* Mucho aire para que se vea limpio */
-}
+        @keyframes blobAnim2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 25px) scale(1.05); }
+        }
 
-.home-featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -.05rem;
-}
+        @keyframes blobAnim3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -25px) scale(0.95); }
+        }
 
-/* Ajustes Responsive */
-@media (min-width: 40em) {
-    .home-featurette-heading {
-        font-size: 50px;
-    }
-}
+        /* ========== NAVBAR ========== */
+        .navbar {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+            box-shadow: 0 4px 20px rgba(74, 85, 104, 0.3);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
 
-/* --- Estilos para la Demo de IA (Gemini) --- */
-#ai-demo {
-    transition: all 0.3s ease;
-}
+        .navbar-scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 6px 30px rgba(74, 85, 104, 0.4);
+        }
 
-#ai-demo:hover {
-    transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
-}
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-#aiResult {
-    border-left: 5px solid #0d6efd; /* Borde azul lateral para destacar la respuesta */
-}
+        .navbar-brand i {
+            font-size: 1.8rem;
+        }
 
-#aiResult ul {
-    padding-left: 1.2rem;
-    margin-bottom: 0;
-}
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            padding: 0.5rem 1.5rem !important;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-#aiResult h3, #aiResult h4 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    color: #333;
-}
+        .nav-link:hover, .nav-link.active {
+            color: white !important;
+        }
 
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
 
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 60%;
+        }
+
+        /* ========== CAROUSEL ========== */
+        .carousel {
+            margin-top: 76px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .carousel-item {
+            height: 600px;
+            position: relative;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            filter: brightness(0.7);
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 85, 104, 0.7) 0%, rgba(45, 55, 72, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            z-index: 2;
+            bottom: 50px;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .carousel-caption p {
+            font-size: 1.3rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out 0.2s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== FEATURES SECTION ========== */
+        .features-section {
+            padding: 60px 0 40px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== HERO VISUAL SECTION ========== */
+        .hero-visual-section {
+            padding: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .visual-container {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rotating-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(74, 85, 104, 0.15) 0%, rgba(45, 55, 72, 0.15) 100%);
+            border: 3px solid rgba(74, 85, 104, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate360 20s linear infinite;
+        }
+
+        .circle-inner {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 90px;
+            box-shadow: 0 15px 40px rgba(74, 85, 104, 0.2);
+        }
+
+        @keyframes rotate360 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px 30px;
+            box-shadow: 0 20px 50px rgba(74, 85, 104, 0.2);
+            border: 1px solid rgba(74, 85, 104, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .floating-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 60px rgba(74, 85, 104, 0.3);
+        }
+
+        .card-1 {
+            top: 50px;
+            left: 30px;
+            animation: float1 4s ease-in-out infinite;
+        }
+
+        .card-2 {
+            top: 280px;
+            right: 50px;
+            animation: float2 5s ease-in-out infinite;
+        }
+
+        .card-3 {
+            bottom: 60px;
+            left: 90px;
+            animation: float3 4.5s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        @keyframes float3 {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .card-icon {
+            font-size: 45px;
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-weight: 700;
+            color: var(--dark-bg);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-col {
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-col:hover .icon-circle {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-col h2 {
+            margin-top: 15px;
+            font-weight: 700;
+            color: var(--dark-bg);
+        }
+
+        .feature-col p {
+            color: #6c757d;
+            font-size: 1.05rem;
+        }
+
+        /* ========== FEATURETTES ========== */
+        .featurettes-section {
+            padding: 40px 0 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .featurette {
+            margin-bottom: 80px;
+        }
+
+        .featurette-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+        }
+
+        .featurette .lead {
+            font-size: 1.2rem;
+            color: #6c757d;
+            line-height: 1.8;
+        }
+
+        .featurette-image {
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .featurette-image:hover {
+            transform: scale(1.02);
+        }
+
+        .featurette-divider {
+            margin: 40px 0;
+            border-color: rgba(74, 85, 104, 0.2);
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 80px;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .btn-cta {
+            background: white;
+            color: #2d3748;
+            padding: 15px 50px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            color: #1a202c;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 450px;
+            }
+
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+
+            .featurette-heading {
+                font-size: 1.8rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .icon-circle {
+                width: 80px;
+                height: 80px;
+            }
+
+            .visual-container {
+                display: none;
+            }
+
+            .stats-row {
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
 /* =========================================
-   SECCIÓN VICTOR (DASHBOARD)
-   Prefijo obligatorio: .dash-  o  #dash-
+   DASHBOARD - SECCIÓN VICTOR
+   Prefijo: .dash-
    ========================================= */
 
-/* Fondo suave para el dashboard */
 .dash-body {
-    background-color: #f1f4f6; /* Un gris azulado muy clarito */
+    background-color: #f1f4f6 !important;
+    padding-top: 3.5rem !important;
 }
 
-/* Header Animado */
 .dash-header-animate {
     animation: fadeInDown 0.8s ease-out;
 }
 
-/* Efecto Hover en las Tarjetas KPI */
 .dash-card-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: default;
 }
 
 .dash-card-hover:hover {
-    transform: translateY(-5px); /* Se levanta un poco */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Ajustes de Tablas */
 #tabla-transacciones th {
     font-weight: 600;
     color: #555;
 }
 
-/* Animación simple de entrada */
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -156,25 +614,22 @@ body {
     }
 }
 
-
 /* =========================================
-   SECCIÓN DIEGO (CONTACTO)
-   Prefijo obligatorio: .cont-  o  #cont-
+   CONTACTO - SECCIÓN DIEGO
+   Prefijo: .cont-
    ========================================= */
 
-/* Fondo general */
 .cont-body {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa !important;
+    padding-top: 3.5rem !important;
 }
 
-/* Hero Header (Fondo degradado azulado) */
 .cont-hero-section {
     background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
-    margin-top: -1.5rem; /* Para pegarse al navbar */
+    margin-top: -1.5rem;
     padding-bottom: 3rem;
 }
 
-/* Animaciones */
 .cont-animate-fade {
     animation: fadeIn 1.2s ease-out;
 }
@@ -183,7 +638,6 @@ body {
     animation: fadeInUp 0.8s ease-out;
 }
 
-/* Tarjetas del Equipo */
 .cont-team-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: white;
@@ -192,22 +646,24 @@ body {
 
 .cont-team-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Avatar circular */
 .cont-avatar {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Keyframes */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }
 }
 
 @keyframes fadeInUp {
@@ -220,3 +676,64 @@ body {
         transform: translateY(0);
     }
 }
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 450px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .featurette-heading {
+        font-size: 1.8rem;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .visual-container {
+        display: none;
+    }
+
+    .stats-row {
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .blob-1, 
+    .blob-2, 
+    .blob-3 {
+        opacity: 0.05;
+    }
+}
+
+/* =========================================
+   FIN DEL ARCHIVO CSS
+   ========================================= */
