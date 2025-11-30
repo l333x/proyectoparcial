@@ -619,63 +619,43 @@ body {
    Prefijo: .cont-
    ========================================= */
 
-.cont-body {
-    background-color: #f8f9fa !important;
-    padding-top: 3.5rem !important;
-}
-
-.cont-hero-section {
-    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
-    margin-top: -1.5rem;
-    padding-bottom: 3rem;
-}
-
-.cont-animate-fade {
-    animation: fadeIn 1.2s ease-out;
-}
-
-.cont-animate-up {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-.cont-team-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: white;
-    border-radius: 1rem;
-}
-
-.cont-team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
-}
-
-.cont-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-@keyframes fadeIn {
-    from { 
-        opacity: 0; 
-    }
-    to { 
-        opacity: 1; 
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+     .cont-body {
+        padding-top: 70px;
+      }
+      .cont-hero-section {
+        background: linear-gradient(135deg, #3d4d5c);
+        margin-top: 75px;
+      }
+      .cont-animate-fade {
+        animation: fadeIn 1s ease-in;
+      }
+      .cont-animate-up {
+        animation: slideUp 0.8s ease-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideUp {
+        from { 
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to { 
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .cont-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        font-weight: bold;
+      }
+      .btn-light:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
 
 /* =========================================
    RESPONSIVE DESIGN
@@ -733,6 +713,8 @@ body {
         opacity: 0.05;
     }
 }
+
+
 
 /* =========================================
    FIN DEL ARCHIVO CSS
